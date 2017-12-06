@@ -44,6 +44,10 @@ export class HomeComponent implements OnInit {
   }
   
   addItem() {
+    if (this.goalText === '') {
+      return;
+    }
+    
     this.goals.push(this.goalText);
     this.goalText = '';
     this.itemCount = this.goals.length;
